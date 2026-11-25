@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Assignment</title>
+</head>
+<body>
+
+    <h1>JavaScript Assignment - Array Programs</h1>
+
+    <script>
+
+        // =====================================
+        // 1. Add an Element in an Array
+        // =====================================
+
+        console.log("1. Add an Element in an Array");
+
+        // Normal Function
+        function addElement(arr, element) {
+            arr.push(element);
+            console.log("Array =", arr);
+        }
+
+        let arr1 = [10, 20, 30, 40];
+        addElement(arr1, 50);
+
+
+        // Arrow Function
+        const addElementArrow = (arr, element) => {
+            arr.push(element);
+            console.log("Array =", arr);
+        };
+
+        let arr2 = [10, 20, 30, 40];
+        addElementArrow(arr2, 50);
+
+
+        // =====================================
+        // 2. Remove the Last Element
+        // =====================================
+
+        console.log("2. Remove the Last Element");
+
+        // Normal Function
+        function removeLast(arr) {
+            arr.pop();
+            console.log("Array =", arr);
+        }
+
+        let arr3 = [10, 20, 30, 40, 50];
+        removeLast(arr3);
+
+
+        // Arrow Function
+        const removeLastArrow = (arr) => {
+            arr.pop();
+            console.log("Array =", arr);
+        };
+
+        let arr4 = [10, 20, 30, 40, 50];
+        removeLastArrow(arr4);
+
+
+        // =====================================
+        // 3. Add an Element at the Beginning
+        // =====================================
+
+        console.log("3. Add an Element at the Beginning");
+
+        // Normal Function
+        function addBeginning(arr, element) {
+            arr.unshift(element);
+            console.log("Array =", arr);
+        }
+
+        let arr5 = [20, 30, 40, 50];
+        addBeginning(arr5, 10);
+
+
+        // Arrow Function
+        const addBeginningArrow = (arr, element) => {
+            arr.unshift(element);
+            console.log("Array =", arr);
+        };
+
+        let arr6 = [20, 30, 40, 50];
+        addBeginningArrow(arr6, 10);
+
+
+        // =====================================
+        // 4. Remove the First Element
+        // =====================================
+
+        console.log("4. Remove the First Element");
+
+        // Normal Function
+        function removeFirst(arr) {
+            arr.shift();
+            console.log("Array =", arr);
+        }
+
+        let arr7 = [10, 20, 30, 40, 50];
+        removeFirst(arr7);
+
+
+        // Arrow Function
+        const removeFirstArrow = (arr) => {
+            arr.shift();
+            console.log("Array =", arr);
+        };
+
+        let arr8 = [10, 20, 30, 40, 50];
+        removeFirstArrow(arr8);
+
+
+        // =====================================
+        // 5. Display All Elements
+        // =====================================
+
+        console.log("5. Display All Elements");
+
+        // Normal Function
+        function displayElements(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                console.log(arr[i]);
+            }
+        }
+
+        let arr9 = [10, 20, 30, 40, 50];
+        displayElements(arr9);
+
+
+        // Arrow Function
+        const displayElementsArrow = (arr) => {
+            for (let i = 0; i < arr.length; i++) {
+                console.log(arr[i]);
+            }
+        };
+
+        let arr10 = [10, 20, 30, 40, 50];
+        displayElementsArrow(arr10);
+
+
+        // =====================================
+        // 6. Find the Sum of Array Elements
+        // =====================================
+
+        console.log("6. Sum of Array Elements");
+
+        // Normal Function
+        function arraySum(arr) {
+            let sum = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+
+            console.log("Sum =", sum);
+        }
+
+        let arr11 = [10, 20, 30, 40, 50];
+        arraySum(arr11);
+
+
+        // Arrow Function
+        const arraySumArrow = (arr) => {
+            let sum = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+
+            console.log("Sum =", sum);
+        };
+
+        let arr12 = [10, 20, 30, 40, 50];
+        arraySumArrow(arr12);
+
+
+        // =====================================
+        // 7. Find the Largest Number in an Array
+        // =====================================
+
+        console.log("7. Largest Number in an Array");
+
+        // Normal Function
+        function findLargest(arr) {
+            let largest = arr[0];
+
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] > largest) {
+                    largest = arr[i];
+                }
+            }
+
+            console.log("Largest Number =", largest);
+        }
+
+        let arr13 = [25, 10, 85, 40, 60];
+        findLargest(arr13);
+
+
+        // Arrow Function
+        const findLargestArrow = (arr) => {
+            let largest = arr[0];
+
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] > largest) {
+                    largest = arr[i];
+                }
+            }
+
+            console.log("Largest Number =", largest);
+        };
+
+        let arr14 = [25, 10, 85, 40, 60];
+        findLargestArrow(arr14);
+
+
+        // =====================================
+        // 8. Count Even and Odd Numbers
+        // =====================================
+
+        console.log("8. Count Even and Odd Numbers");
+
+        // Normal Function
+        function countEvenOdd(arr) {
+            let even = 0;
+            let odd = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] % 2 === 0) {
+                    even++;
+                } else {
+                    odd++;
+                }
+            }
+
+            console.log("Even Numbers =", even);
+            console.log("Odd Numbers =", odd);
+        }
+
+        let arr15 = [10, 15, 20, 25, 30, 35, 40];
+        countEvenOdd(arr15);
+
+
+        // Arrow Function
+        const countEvenOddArrow = (arr) => {
+            let even = 0;
+            let odd = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] % 2 === 0) {
+                    even++;
+                } else {
+                    odd++;
+                }
+            }
+
+            console.log("Even Numbers =", even);
+            console.log("Odd Numbers =", odd);
+        };
+
+        let arr16 = [10, 15, 20, 25, 30, 35, 40];
+        countEvenOddArrow(arr16);
+
+
+        // =====================================
+        // 9. Print Array Elements in Reverse Order
+        // =====================================
+
+        console.log("9. Array Elements in Reverse Order");
+
+        // Normal Function
+        function reverseArray(arr) {
+            for (let i = arr.length - 1; i >= 0; i--) {
+                console.log(arr[i]);
+            }
+        }
+
+        let arr17 = [10, 20, 30, 40, 50];
+        reverseArray(arr17);
+
+
+        // Arrow Function
+        const reverseArrayArrow = (arr) => {
+            for (let i = arr.length - 1; i >= 0; i--) {
+                console.log(arr[i]);
+            }
+        };
+
+        let arr18 = [10, 20, 30, 40, 50];
+        reverseArrayArrow(arr18);
+
+
+        // =====================================
+        // 10. Search for an Element in an Array
+        // =====================================
+
+        console.log("10. Search for an Element in an Array");
+
+        // Normal Function
+        function searchElement(arr, element) {
+            let found = false;
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] === element) {
+                    found = true;
+                    break;
+                }
+            }
+
+            if (found) {
+                console.log(element + " is found in the array");
+            } else {
+                console.log(element + " is not found in the array");
+            }
+        }
+
+        let arr19 = [10, 20, 30, 40, 50];
+        searchElement(arr19, 30);
+
+
+        // Arrow Function
+        const searchElementArrow = (arr, element) => {
+            let found = false;
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] === element) {
+                    found = true;
+                    break;
+                }
+            }
+
+            if (found) {
+                console.log(element + " is found in the array");
+            } else {
+                console.log(element + " is not found in the array");
+            }
+        };
+
+        let arr20 = [10, 20, 30, 40, 50];
+        searchElementArrow(arr20, 30);
+
+    </script>
+
+</body>
+</html>
