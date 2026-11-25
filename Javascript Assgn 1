@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Basics</title>
+</head>
+<body>
+
+  <h1>JavaScript Basics</h1>
+
+  <h2>What is JavaScript?</h2>
+  <p>
+    JavaScript is a programming language used to make web pages interactive.
+    HTML gives the structure, CSS gives the style and JavaScript gives the behaviour.
+    It runs in the browser and can also run on the server using Node.js.
+  </p>
+
+  <p>Open the browser console (press F12 and click Console) to see the output.</p>
+
+  <script>
+    // ---------- 1. Simple script: print Hello JS ----------
+    console.log("Hello JS");
+    document.write("<h3>Hello JS</h3>");
+
+
+    // ---------- 2. Log name and age in console ----------
+    console.log("Name: Surya");
+    console.log("Age: 22");
+
+
+    // ---------- 3. Comments ----------
+
+    // this is a single-line comment
+
+    /*
+      this is a multi-line comment.
+      it can go over many lines.
+      the browser ignores it.
+    */
+
+
+    // ---------- 4. var, let and const ----------
+    var a = 10;
+    let b = 20;
+    const c = 30;
+
+    console.log("var a =", a);
+    console.log("let b =", b);
+    console.log("const c =", c);
+
+
+    // re-initialise (change the value of the same variable)
+    a = 100;
+    b = 200;
+    console.log("var a after re-initialise =", a);   // works
+    console.log("let b after re-initialise =", b);   // works
+
+    try {
+      c = 300;   // const cannot be changed
+    } catch (error) {
+      console.log("const re-initialise error:", error.message);
+    }
+    console.log("const c is still =", c);
+
+
+    // re-declare (declare the same name again)
+    var a = 1000;   // works, var allows re-declaring
+    console.log("var a after re-declare =", a);
+
+    // let b = 2000;   // SyntaxError: Identifier 'b' has already been declared
+    // const c = 3000; // SyntaxError: Identifier 'c' has already been declared
+    // (these two lines are commented because they would stop the whole script)
+  </script>
+
+</body>
+</html>
