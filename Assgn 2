@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Level and Inline Elements Assignment</title>
+</head>
+<body>
+
+    <h1>HTML Block-Level and Inline Elements</h1>
+
+    <p>
+        HTML elements are mainly classified into two types:
+        Block-Level Elements and Inline Elements.
+    </p>
+
+    <hr>
+
+    <!-- ================================= -->
+    <!-- 1. BLOCK LEVEL ELEMENTS -->
+    <!-- ================================= -->
+
+    <h2>1. Block-Level Elements</h2>
+
+    <p>
+        Block-level elements always start on a new line
+        and occupy the available full width of their parent container.
+    </p>
+
+    <h3>Example 1: Heading Elements</h3>
+
+    <h1>This is Heading 1</h1>
+    <h2>This is Heading 2</h2>
+    <h3>This is Heading 3</h3>
+
+    <h3>Example 2: Paragraph Element</h3>
+
+    <p>This is the first paragraph.</p>
+    <p>This is the second paragraph.</p>
+
+    <h3>Example 3: Division Element</h3>
+
+    <div>
+        This is the first division element.
+    </div>
+
+    <div>
+        This is the second division element.
+    </div>
+
+    <h3>Example 4: List Elements</h3>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <ol>
+        <li>Learn HTML</li>
+        <li>Learn CSS</li>
+        <li>Learn JavaScript</li>
+    </ol>
+
+    <h3>Example 5: Other Block-Level Elements</h3>
+
+    <blockquote>
+        This is a blockquote element.
+        It is used to represent a quotation.
+    </blockquote>
+
+    <pre>
+This is a preformatted text element.
+It preserves spaces and line breaks.
+    </pre>
+
+    <hr>
+
+    <!-- ================================= -->
+    <!-- 2. INLINE ELEMENTS -->
+    <!-- ================================= -->
+
+    <h2>2. Inline Elements</h2>
+
+    <p>
+        Inline elements do not start on a new line.
+        They occupy only the space required by their content.
+    </p>
+
+    <h3>Example 1: Bold and Italic</h3>
+
+    <p>
+        This is <b>Bold Text</b> inside a paragraph.
+    </p>
+
+    <p>
+        This is <i>Italic Text</i> inside a paragraph.
+    </p>
+
+    <h3>Example 2: Strong and Emphasis</h3>
+
+    <p>
+        This is <strong>Important Text</strong>.
+    </p>
+
+    <p>
+        This is <em>Emphasized Text</em>.
+    </p>
+
+    <h3>Example 3: Underline and Strike</h3>
+
+    <p>
+        This is <u>Underlined Text</u>.
+    </p>
+
+    <p>
+        This is <del>Deleted Text</del>.
+    </p>
+
+    <h3>Example 4: Span Element</h3>
+
+    <p>
+        HTML is <span>very interesting</span> to learn.
+    </p>
+
+    <h3>Example 5: Link Element</h3>
+
+    <p>
+        Visit
+        <a href="https://www.google.com">Google</a>
+        to search for information.
+    </p>
+
+    <h3>Example 6: Image Element</h3>
+
+    <p>
+        This is an inline image:
+        <img src="https://placehold.co/100x60" alt="Sample image">
+        inside a paragraph.
+    </p>
+
+    <h3>Example 7: Other Inline Elements</h3>
+
+    <p>
+        Water formula: H<sub>2</sub>O
+    </p>
+
+    <p>
+        Mathematical expression: X<sup>2</sup>
+    </p>
+
+    <p>
+        Press <code>Ctrl + C</code> to copy.
+    </p>
+
+    <hr>
+
+    <!-- ================================= -->
+    <!-- 3. COMPARISON -->
+    <!-- ================================= -->
+
+    <h2>3. Difference Between Block-Level and Inline Elements</h2>
+
+    <h3>Block-Level Example</h3>
+
+    <div>First Block Element</div>
+    <div>Second Block Element</div>
+    <div>Third Block Element</div>
+
+    <h3>Inline Example</h3>
+
+    <span>First Inline Element</span>
+    <span>Second Inline Element</span>
+    <span>Third Inline Element</span>
+
+    <hr>
+
+    <!-- ================================= -->
+    <!-- 4. COMBINING BOTH ELEMENTS -->
+    <!-- ================================= -->
+
+    <h2>4. Combining Block-Level and Inline Elements</h2>
+
+    <div>
+        <h3>Welcome to HTML</h3>
+
+        <p>
+            HTML is used to create
+            <strong>web pages</strong>
+            using different elements.
+        </p>
+
+        <p>
+            You can learn more about HTML by visiting
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+                MDN Web Docs
+            </a>.
+        </p>
+    </div>
+
+    <hr>
+
+    <h2>5. Conclusion</h2>
+
+    <p>
+        Block-level elements start on a new line and generally
+        occupy the full available width.
+    </p>
+
+    <p>
+        Inline elements stay within the same line and occupy
+        only the space required by their content.
+    </p>
+
+</body>
+</html>
