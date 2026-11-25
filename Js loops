@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Loop Assignment - 20 Programs</title>
+</head>
+<body>
+
+    <h1>JavaScript Assignment - 20 Loop Programs</h1>
+
+    <script>
+
+        // 1. Print numbers from 1 to 20
+
+        console.log("1. Numbers from 1 to 20");
+
+        for (let i = 1; i <= 20; i++) {
+            console.log(i);
+        }
+
+
+        // 2. Print odd numbers from 1 to 20
+
+        console.log("2. Odd Numbers from 1 to 20");
+
+        for (let i = 1; i <= 20; i += 2) {
+            console.log(i);
+        }
+
+
+        // 3. Print even numbers from 0 to 20
+
+        console.log("3. Even Numbers from 0 to 20");
+
+        for (let i = 0; i <= 20; i += 2) {
+            console.log(i);
+        }
+
+
+        // 4. Print multiples of 5 from 0 to 25
+
+        console.log("4. Multiples of 5");
+
+        for (let i = 0; i <= 25; i += 5) {
+            console.log(i);
+        }
+
+
+        // 5. Sum of numbers from 1 to 10
+
+        console.log("5. Sum of numbers from 1 to 10");
+
+        let sum = 0;
+
+        for (let i = 1; i <= 10; i++) {
+            sum += i;
+        }
+
+        console.log("Sum =", sum);
+
+
+        // 6. Sum of even numbers from 0 to 20
+
+        console.log("6. Sum of even numbers");
+
+        sum = 0;
+
+        for (let i = 0; i <= 20; i += 2) {
+            sum += i;
+        }
+
+        console.log("Sum =", sum);
+
+
+        // 7. Sum of odd numbers from 1 to 19
+
+        console.log("7. Sum of odd numbers");
+
+        sum = 0;
+
+        for (let i = 1; i <= 19; i += 2) {
+            sum += i;
+        }
+
+        console.log("Sum =", sum);
+
+
+        // 8. Sum of multiples of 5 from 0 to 20
+
+        console.log("8. Sum of multiples of 5");
+
+        sum = 0;
+
+        for (let i = 0; i <= 20; i += 5) {
+            sum += i;
+        }
+
+        console.log("Sum =", sum);
+
+
+        // 9. Series: 1/1! + 2/2! + ... + 5/5!
+
+        console.log("9. Factorial Series");
+
+        sum = 0;
+        let fact = 1;
+
+        for (let i = 1; i <= 5; i++) {
+            fact *= i;
+            sum += i / fact;
+        }
+
+        console.log("Sum =", sum);
+
+
+        // 10. Series: 0/0! + 2/2! + 4/4! + 6/6!
+
+        console.log("10. Even Factorial Series");
+
+        sum = 0;
+
+        for (let i = 0; i <= 6; i += 2) {
+            fact = 1;
+
+            for (let j = 1; j <= i; j++) {
+                fact *= j;
+            }
+
+            sum += i / fact;
+        }
+
+        console.log("Sum =", sum);
+
+
+        // 11. Series: 1/1! + 3/3! + 5/5! + 7/7!
+
+        console.log("11. Odd Factorial Series");
+
+        sum = 0;
+
+        for (let i = 1; i <= 7; i += 2) {
+            fact = 1;
+
+            for (let j = 1; j <= i; j++) {
+                fact *= j;
+            }
+
+            sum += i / fact;
+        }
+
+        console.log("Sum =", sum);
+
+
+        // 12. Find factorial of a given number
+
+        console.log("12. Factorial of a Number");
+
+        let num = Number(prompt("Enter a number:"));
+
+        fact = 1;
+
+        for (let i = 1; i <= num; i++) {
+            fact *= i;
+        }
+
+        console.log("Factorial =", fact);
+
+
+        // 13. Check whether a number is prime
+
+        console.log("13. Prime Number Check");
+
+        num = Number(prompt("Enter a number:"));
+
+        let count = 0;
+
+        for (let i = 1; i <= num; i++) {
+            if (num % i === 0) {
+                count++;
+            }
+        }
+
+        if (num > 1 && count === 2) {
+            console.log("Prime Number");
+        } else {
+            console.log("Not a Prime Number");
+        }
+
+
+        // 14. Print prime numbers from 1 to 100
+
+        console.log("14. Prime Numbers from 1 to 100");
+
+        for (let n = 2; n <= 100; n++) {
+            count = 0;
+
+            for (let i = 1; i <= n; i++) {
+                if (n % i === 0) {
+                    count++;
+                }
+            }
+
+            if (count === 2) {
+                console.log(n);
+            }
+        }
+
+
+        // 15. Check Armstrong number
+
+        console.log("15. Armstrong Number Check");
+
+        num = Number(prompt("Enter a number:"));
+
+        let temp = num;
+        let digits = String(num).length;
+        sum = 0;
+
+        for (; temp > 0; temp = Math.floor(temp / 10)) {
+            let digit = temp % 10;
+            sum += digit ** digits;
+        }
+
+        if (num >= 0 && sum === num) {
+            console.log("Armstrong Number");
+        } else {
+            console.log("Not an Armstrong Number");
+        }
+
+
+        // 16. Print Armstrong numbers from 1 to 1000
+
+        console.log("16. Armstrong Numbers from 1 to 1000");
+
+        for (let n = 1; n <= 1000; n++) {
+            temp = n;
+            digits = String(n).length;
+            sum = 0;
+
+            for (; temp > 0; temp = Math.floor(temp / 10)) {
+                let digit = temp % 10;
+                sum += digit ** digits;
+            }
+
+            if (sum === n) {
+                console.log(n);
+            }
+        }
+
+
+        // 17. Fibonacci Series
+
+        console.log("17. Fibonacci Series");
+
+        let a = 0;
+        let b = 1;
+
+        for (let i = 1; i <= 10; i++) {
+            console.log(a);
+
+            let next = a + b;
+            a = b;
+            b = next;
+        }
+
+
+        // 18. Multiplication table of 5
+
+        console.log("18. Multiplication Table of 5");
+
+        for (let i = 1; i <= 10; i++) {
+            console.log(i + " * 5 = " + (i * 5));
+        }
+
+
+        // 19. Sum of digits of a number
+
+        console.log("19. Sum of Digits");
+
+        num = Number(prompt("Enter a number:"));
+
+        temp = Math.abs(num);
+        sum = 0;
+
+        for (; temp > 0; temp = Math.floor(temp / 10)) {
+            sum += temp % 10;
+        }
+
+        console.log("Sum of digits =", sum);
+
+
+        // 20. Check whether a word is a palindrome
+
+        console.log("20. Palindrome Check");
+
+        let word = prompt("Enter a word:");
+        let reverse = "";
+
+        for (let i = word.length - 1; i >= 0; i--) {
+            reverse += word[i];
+        }
+
+        if (word.toLowerCase() === reverse.toLowerCase()) {
+            console.log("Palindrome");
+        } else {
+            console.log("Not a Palindrome");
+        }
+
+    </script>
+
+</body>
+</html>
