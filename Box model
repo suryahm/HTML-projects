@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Box Model Assignment</title>
+
+  <style>
+    /* Task 1: width 300px, padding 20px, 10px green border */
+    .task1 {
+      width: 300px;
+      padding: 20px;
+      border: 10px solid green;
+    }
+
+    /* Task 2: width 200px */
+    .task2 {
+      width: 200px;
+    }
+
+    /* Task 3: 2px solid red border */
+    .task3 {
+      width: 200px;
+      border: 2px solid red;
+    }
+
+    /* Task 4: 25px space between border and content (padding) */
+    .task4 {
+      width: 200px;
+      border: 2px solid red;
+      padding: 25px;
+    }
+
+    /* Task 5: 25px space outside on the left (margin-left) */
+    .task5 {
+      width: 200px;
+      border: 2px solid red;
+      padding: 25px;
+      margin-left: 25px;
+    }
+
+    /* Task 7: height 50px, padding 15px, border 5px solid red */
+    .task7 {
+      height: 50px;
+      padding: 15px;
+      border: 5px solid red;
+    }
+
+    /* Task 8: width 300px, padding 20px, border 5px solid, margin 10px */
+    .task8 {
+      width: 300px;
+      padding: 20px;
+      border: 5px solid black;
+      margin: 10px;
+    }
+
+    /* Task 9: 600px wide, centered, padding 20px, border 2px */
+    .task9 {
+      width: 600px;
+      padding: 20px;
+      border: 2px solid black;
+      margin: 0 auto;
+    }
+
+    /* Task 10: three equal buttons inside a 600px container */
+    .container {
+      width: 600px;
+      display: flex;
+    }
+
+    .container button {
+      width: 33.33%;
+      box-sizing: border-box; /* padding and border are included in the width */
+    }
+
+    .btn1 { padding: 10px; }
+    .btn2 { padding: 20px; }
+    .btn3 { padding: 30px; }
+
+    /* Task 11: different padding on each side (top right bottom left) */
+    .task11 {
+      width: 300px;
+      border: 2px solid blue;
+      padding: 40px 10px 20px 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Box Model Tasks</h1>
+
+  <h2>1. Width 300px, padding 20px, 10px green border</h2>
+  <div class="task1">This is task 1</div>
+
+  <h2>2. Width of div = 200px</h2>
+  <div class="task2">This is task 2</div>
+
+  <h2>3. Add 2px solid red border</h2>
+  <div class="task3">This is task 3</div>
+
+  <h2>4. Add 25px space between border and content</h2>
+  <div class="task4">This is task 4</div>
+
+  <h2>5. Add 25px space outside, to the left</h2>
+  <div class="task5">This is task 5</div>
+
+  <h2>6. Formula for total width</h2>
+  <p>
+    Total width = width + padding-left + padding-right + border-left + border-right + margin-left + margin-right
+  </p>
+  <p>
+    Using the div from task 5: 200 + 25 + 25 + 2 + 2 + 25 + 0 = 279px
+  </p>
+
+  <h2>7. Total height</h2>
+  <div class="task7">This is task 7</div>
+  <p>
+    Total height = height + padding-top + padding-bottom + border-top + border-bottom <br>
+    = 50 + 15 + 15 + 5 + 5 = 90px
+  </p>
+
+  <h2>8. Total width</h2>
+  <div class="task8">This is task 8</div>
+  <p>
+    Total horizontal space = width + padding (left + right) + border (left + right) + margin (left + right) <br>
+    = 300 + 40 + 10 + 20 = 370px
+  </p>
+
+  <h2>9. 600px wide div, horizontally centered</h2>
+  <div class="task9">This is task 9. It is centered using margin: 0 auto.</div>
+
+  <h2>10. Equal sized buttons with different padding</h2>
+  <div class="container">
+    <button class="btn1">Button 1</button>
+    <button class="btn2">Button 2</button>
+    <button class="btn3">Button 3</button>
+  </div>
+
+  <h2>11. Different padding on each side</h2>
+  <div class="task11">
+    Top 40px, right 10px, bottom 20px, left 50px. The text moves down and to the right.
+  </div>
+
+</body>
+</html>
