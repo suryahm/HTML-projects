@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Forms Assignment</title>
+</head>
+<body>
+  <h1>HTML Forms Assignment</h1>
+
+  <!-- 1. Form structure -->
+  <h2>1. Form Structure</h2>
+  <!-- form collects data from the user and sends it to a server -->
+  <!-- action = where the data goes, method = how it is sent (get / post) -->
+  <form action="submit.php" method="post">
+    <input type="text" name="username">
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+  <hr>
+
+  <!-- 2. Login form -->
+  <h2>2. Login Form</h2>
+  <form action="login.php" method="post">
+    Username:
+    <input type="text" name="username">
+    <br><br>
+
+    Email:
+    <input type="email" name="email">
+    <br><br>
+
+    Password:
+    <input type="password" name="password">
+    <br><br>
+
+    <input type="submit" value="Login">
+  </form>
+  <hr>
+
+  <!-- 3. Checkbox, radio and number -->
+  <h2>3. Checkbox, Radio and Number</h2>
+  <form action="#" method="post">
+
+    <!-- checkbox: user can select more than one -->
+    <p>Select your hobbies:</p>
+    <input type="checkbox" name="hobby" value="music"> Music <br>
+    <input type="checkbox" name="hobby" value="sketching"> Sketching <br>
+    <input type="checkbox" name="hobby" value="gaming"> Gaming <br>
+
+    <!-- radio: only one can be selected, so all have the same name -->
+    <p>Select your gender:</p>
+    <input type="radio" name="gender" value="male"> Male <br>
+    <input type="radio" name="gender" value="female"> Female <br>
+    <input type="radio" name="gender" value="other"> Other <br>
+
+    <!-- number: accepts only numbers -->
+    <p>Enter your age:</p>
+    <input type="number" name="age">
+    <br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+  <hr>
+
+  <!-- 4. Label and placeholder -->
+  <h2>4. Label and Placeholder</h2>
+  <form action="#" method="post">
+
+    <!-- the "for" in label must match the "id" of the input -->
+    <!-- clicking on the label will focus the input -->
+    <label for="contact-name">Name:</label>
+    <input type="text" id="contact-name" name="name" placeholder="Enter your name">
+    <br><br>
+
+    <label for="contact-email">Email:</label>
+    <input type="email" id="contact-email" name="email" placeholder="example@gmail.com">
+    <br><br>
+
+    <label for="contact-phone">Phone:</label>
+    <input type="number" id="contact-phone" name="phone" placeholder="Enter phone number">
+    <br><br>
+
+    <input type="submit" value="Send">
+  </form>
+  <hr>
+
+  <!-- 5. Signup form with required -->
+  <h2>5. Signup Form (Required Fields)</h2>
+  <form action="#" method="post">
+
+    <label for="signup-name">Name:</label>
+    <input type="text" id="signup-name" name="name" placeholder="Enter your name" required>
+    <br><br>
+
+    <label for="signup-email">Email:</label>
+    <input type="email" id="signup-email" name="email" placeholder="Enter your email" required>
+    <br><br>
+
+    <label for="signup-password">Password:</label>
+    <input type="password" id="signup-password" name="password" placeholder="Enter password" required>
+    <br><br>
+
+    <!-- if any required field is empty, the browser will not submit the form -->
+    <input type="submit" value="Sign Up">
+  </form>
+  <hr>
+
+  <!-- 6. HTML5 validation -->
+  <h2>6. HTML5 Validation</h2>
+  <form action="#" method="post">
+
+    <!-- required: cannot be left empty -->
+    <label for="val-name">Name:</label>
+    <input type="text" id="val-name" name="name" placeholder="Enter your name" required>
+    <br><br>
+
+    <!-- type email: browser checks for @ and a proper email format -->
+    <label for="val-email">Email:</label>
+    <input type="email" id="val-email" name="email" placeholder="Enter your email" required>
+    <br><br>
+
+    <!-- minlength: password must be at least 6 characters -->
+    <label for="val-password">Password:</label>
+    <input type="password" id="val-password" name="password" minlength="6" placeholder="Min 6 characters" required>
+    <br><br>
+
+    <!-- min and max: number range check -->
+    <label for="val-age">Age (18 to 60):</label>
+    <input type="number" id="val-age" name="age" min="18" max="60" placeholder="Enter age" required>
+    <br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <!-- Things I tested:
+       1. Empty name -> browser shows "Please fill out this field"
+       2. Email without @ (like abc) -> browser shows invalid email message
+       3. Password with 3 characters -> browser asks for minimum 6 characters
+       4. Age 10 or 100 -> browser shows value must be between 18 and 60
+  -->
+  <hr>
+
+  <!-- 7. Registration form -->
+  <h2>7. Registration Form</h2>
+  <form action="#" method="post">
+
+    <label for="reg-name">Name:</label>
+    <input type="text" id="reg-name" name="name" placeholder="Enter your name" required>
+    <br><br>
+
+    <label for="reg-email">Email:</label>
+    <input type="email" id="reg-email" name="email" placeholder="Enter your email" required>
+    <br><br>
+
+    <label for="reg-password">Password:</label>
+    <input type="password" id="reg-password" name="password" minlength="6" placeholder="Min 6 characters" required>
+    <br><br>
+
+    <!-- gender (radio) -->
+    <p>Gender:</p>
+    <input type="radio" id="reg-male" name="gender" value="male" required>
+    <label for="reg-male">Male</label>
+    <input type="radio" id="reg-female" name="gender" value="female">
+    <label for="reg-female">Female</label>
+    <input type="radio" id="reg-other" name="gender" value="other">
+    <label for="reg-other">Other</label>
+    <br><br>
+
+    <!-- hobbies (checkbox) -->
+    <p>Hobbies:</p>
+    <input type="checkbox" id="reg-music" name="hobbies" value="music">
+    <label for="reg-music">Music</label>
+    <input type="checkbox" id="reg-sketching" name="hobbies" value="sketching">
+    <label for="reg-sketching">Sketching</label>
+    <input type="checkbox" id="reg-gaming" name="hobbies" value="gaming">
+    <label for="reg-gaming">Gaming</label>
+    <br><br>
+
+    <label for="reg-age">Age:</label>
+    <input type="number" id="reg-age" name="age" min="18" max="60" placeholder="Enter your age" required>
+    <br><br>
+
+    <input type="submit" value="Register">
+  </form>
+
+</body>
+</html>
