@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Operators</title>
+</head>
+<body>
+
+  <h1>JavaScript Operators</h1>
+  <p>Open the browser console (F12 and click Console) to see the output.</p>
+
+  <script>
+    // ---------- Task 1: Arithmetic Operators ----------
+    console.log("----- Task 1: Arithmetic Operators -----");
+    let n1 = 20;
+    let n2 = 6;
+    console.log("Sum:", n1 + n2);
+    console.log("Difference:", n1 - n2);
+    console.log("Product:", n1 * n2);
+    console.log("Quotient:", n1 / n2);
+    console.log("Remainder:", n1 % n2);
+
+
+    // ---------- Task 2: Assignment Operators ----------
+    console.log("----- Task 2: Assignment Operators -----");
+    let value = 10;
+    value += 5;   // 15
+    value -= 3;   // 12
+    value *= 2;   // 24
+    value /= 4;   // 6
+    console.log("Final value:", value);
+
+
+    // ---------- Task 3: Comparison Operators ----------
+    console.log("----- Task 3: Comparison Operators -----");
+    let x = 10;
+    let y = 20;
+    console.log("x == y :", x == y);
+    console.log("x === y :", x === y);
+    console.log("x > y :", x > y);
+    console.log("x <= y :", x <= y);
+
+    // difference between == and ===
+    console.log('10 == "10" :', 10 == "10");    // true, only value is checked
+    console.log('10 === "10" :', 10 === "10");  // false, value and type are checked
+
+
+    // ---------- Task 4: Logical Operators ----------
+    console.log("----- Task 4: Logical Operators -----");
+    let p = true;
+    let q = false;
+    console.log("Both true (p && q):", p && q);
+    console.log("At least one true (p || q):", p || q);
+    console.log("Reverse p (!p):", !p);
+
+
+    // ---------- Task 5: Ternary Operator ----------
+    console.log("----- Task 5: Even or Odd -----");
+    let num = 7;
+    let result = (num % 2 === 0) ? "Even" : "Odd";
+    console.log(num + " is " + result);
+
+
+    // ---------- Task 6: Salary Calculator ----------
+    console.log("----- Task 6: Salary Calculator -----");
+    let basic = 30000;
+    let salary = basic;
+
+    salary += basic * 20 / 100;   // add 20% HRA
+    salary += basic * 10 / 100;   // add 10% DA
+
+    let tax = salary * 8 / 100;   // 8% tax on gross salary
+    salary -= tax;                // deduct tax
+
+    console.log("Basic Salary:", basic);
+    console.log("Tax:", tax);
+    console.log("Net Salary:", salary);
+
+
+    // ---------- Task 7: Grade Evaluation System ----------
+    console.log("----- Task 7: Grade Evaluation -----");
+    let marks = 82;
+
+    if (marks < 0 || marks > 100) {
+      console.log("Invalid marks");
+    } else if (marks >= 90 && marks <= 100) {
+      console.log("Grade: A");
+    } else if (marks >= 75 && marks <= 89) {
+      console.log("Grade: B");
+    } else if (marks >= 50 && marks <= 74) {
+      console.log("Grade: C");
+    } else {
+      console.log("Fail");
+    }
+
+
+    // ---------- Task 8: Login Validation ----------
+    console.log("----- Task 8: Login Validation -----");
+    let storedUsername = "surya";
+    let storedPassword = "1234";
+
+    let inputUsername = "surya";
+    let inputPassword = "1234";
+
+    if (inputUsername === storedUsername && inputPassword === storedPassword) {
+      console.log("Login successful");
+    } else {
+      console.log("Invalid username or password");
+    }
+
+
+    // ---------- Task 9: Electricity Bill Calculator ----------
+    console.log("----- Task 9: Electricity Bill -----");
+    let units = 250;
+    let bill = 0;
+
+    // slab wise: first 100 units at 5, next 100 units at 7, remaining at 10
+    if (units <= 100) {
+      bill = units * 5;
+    } else if (units <= 200) {
+      bill = (100 * 5) + ((units - 100) * 7);
+    } else {
+      bill = (100 * 5) + (100 * 7) + ((units - 200) * 10);
+    }
+
+    console.log("Units consumed:", units);
+    console.log("Total bill: ₹" + bill);
+
+
+    // ---------- Task 10: Discount Eligibility ----------
+    console.log("----- Task 10: Discount Eligibility -----");
+    let purchaseAmount = 6000;
+    let isPremium = true;
+
+    let discount = (purchaseAmount > 5000 && isPremium) ? "Discount Applied" : "No Discount";
+    console.log(discount);
+  </script>
+
+</body>
+</html>
