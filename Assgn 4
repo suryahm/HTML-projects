@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Semantic Website</title>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Website</h1>
+        <p>Learning HTML step by step</p>
+
+        <nav>
+            <a href="#home">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#services">Services</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to my website. This is a simple page created using HTML semantic tags.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>My name is Rahul. I am learning web development and practising HTML.</p>
+        </section>
+
+        <section id="services">
+            <h2>My Interests</h2>
+
+            <article>
+                <h3>Web Development</h3>
+                <p>I enjoy learning how to create websites using HTML, CSS and JavaScript.</p>
+            </article>
+
+            <article>
+                <h3>Programming</h3>
+                <p>I like solving problems and learning new programming concepts.</p>
+            </article>
+        </section>
+
+        <aside>
+            <h3>Did You Know?</h3>
+            <p>Semantic tags make the structure of a webpage easier to understand.</p>
+        </aside>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: example@gmail.com</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
