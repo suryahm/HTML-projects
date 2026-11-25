@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Selectors Assignment</title>
+
+  <style>
+    /* element selector - all p tags */
+    p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* class selector - .intro */
+    .intro {
+      font-style: italic;
+    }
+
+    /* class selector - .highlight */
+    .highlight {
+      background-color: #f0f8ff;
+      padding: 8px;
+    }
+
+    /* id selector - #header */
+    #header {
+      color: #2c3e50;
+      font-size: 32px;
+    }
+
+    /* class selector - .box */
+    .box {
+      border: 1px solid #ccc;
+      padding: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="header">CSS Selectors</h1>
+
+  <div class="box">
+    <p class="intro">This is the intro paragraph. It is shown in italic style.</p>
+    <p>This is a normal paragraph. It uses the element selector.</p>
+    <p class="highlight">This paragraph is highlighted using a class selector.</p>
+  </div>
+
+</body>
+</html>
