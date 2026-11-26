@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Advanced Arrays and Destructuring</title>
+</head>
+<body>
+
+  <h1>Advanced Arrays, Destructuring and Rest Operator</h1>
+  <p>Open the browser console (F12 and click Console) to see the output.</p>
+
+  <script>
+    // =====================================================
+    //                   ADVANCED ARRAY
+    // =====================================================
+
+    // 1. Insert multiple elements using splice()
+    let arr1 = [1, 2, 6, 7];
+    arr1.splice(2, 0, 3, 4, 5);   // at index 2, remove 0, insert 3, 4, 5
+    console.log("1. Insert multiple:", arr1);
+
+
+    // 2. Remove the last two elements using splice()
+    let arr2 = [10, 20, 30, 40, 50];
+    arr2.splice(arr2.length - 2, 2);
+    console.log("2. Remove last two:", arr2);
+
+
+    // 3. Extract the last four elements using slice()
+    let arr3 = [1, 2, 3, 4, 5, 6, 7, 8];
+    let lastFour = arr3.slice(-4);
+    console.log("3. Last four:", lastFour);
+
+
+    // 4. Convert all strings to lowercase using map()
+    let words = ["APPLE", "Banana", "ChErRy"];
+    let lowerWords = words.map(function (word) {
+      return word.toLowerCase();
+    });
+    console.log("4. Lowercase:", lowerWords);
+
+
+    // 5. Add 100 to every number using map()
+    let nums5 = [1, 2, 3, 4, 5];
+    let plus100 = nums5.map(function (n) {
+      return n + 100;
+    });
+    console.log("5. Add 100:", plus100);
+
+
+    // 6. Filter all odd numbers
+    let nums6 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let oddNumbers = nums6.filter(function (n) {
+      return n % 2 !== 0;
+    });
+    console.log("6. Odd numbers:", oddNumbers);
+
+
+    // 7. Filter names starting with A
+    let names = ["Arun", "Bala", "Anitha", "Karthik", "Asha"];
+    let aNames = names.filter(function (n) {
+      return n.startsWith("A");
+    });
+    console.log("7. Names starting with A:", aNames);
+
+
+    // 8. Find the first negative number
+    let nums8 = [5, 10, -3, 8, -7];
+    let firstNegative = nums8.find(function (n) {
+      return n < 0;
+    });
+    console.log("8. First negative:", firstNegative);
+
+
+    // 9. Find the first string with more than five characters
+    let words9 = ["cat", "apple", "banana", "elephant"];
+    let longWord = words9.find(function (w) {
+      return w.length > 5;
+    });
+    console.log("9. First string longer than 5:", longWord);
+
+
+    // 10. Calculate the average using reduce()
+    let nums10 = [10, 20, 30, 40, 50];
+    let total10 = nums10.reduce(function (sum, n) {
+      return sum + n;
+    }, 0);
+    let average = total10 / nums10.length;
+    console.log("10. Average:", average);
+
+
+    // 11. Count total characters in an array of strings using reduce()
+    let words11 = ["hello", "js", "world"];
+    let totalChars = words11.reduce(function (count, w) {
+      return count + w.length;
+    }, 0);
+    console.log("11. Total characters:", totalChars);
+
+
+    // 12. Find the minimum value using reduce()
+    let nums12 = [45, 12, 78, 3, 56];
+    let minimum = nums12.reduce(function (min, n) {
+      if (n < min) {
+        return n;
+      } else {
+        return min;
+      }
+    }, nums12[0]);
+    console.log("12. Minimum:", minimum);
+
+
+    // 13. Use map() to calculate 18% GST for product prices
+    let prices = [100, 250, 500, 1000];
+    let gstAmounts = prices.map(function (price) {
+      return price * 18 / 100;
+    });
+    let priceWithGst = prices.map(function (price) {
+      return price + (price * 18 / 100);
+    });
+    console.log("13. GST amounts:", gstAmounts);
+    console.log("13. Price with GST:", priceWithGst);
+
+
+    // 14. Filter students who scored above 75 marks
+    let students = [
+      { name: "Arun", marks: 82 },
+      { name: "Bala", marks: 60 },
+      { name: "Charan", marks: 91 },
+      { name: "Divya", marks: 75 }
+    ];
+    let toppers = students.filter(function (s) {
+      return s.marks > 75;
+    });
+    console.log("14. Students above 75:", toppers);
+
+
+    // 15. Find the first employee whose salary is above 50000
+    let employees = [
+      { name: "Ravi", salary: 30000 },
+      { name: "Meena", salary: 45000 },
+      { name: "Kumar", salary: 60000 },
+      { name: "Priya", salary: 80000 }
+    ];
+    let firstRich = employees.find(function (e) {
+      return e.salary > 50000;
+    });
+    console.log("15. First employee above 50000:", firstRich);
+
+
+    // 16. Remove the middle element using splice()
+    let arr16 = [1, 2, 3, 4, 5];
+    let middle = Math.floor(arr16.length / 2);
+    arr16.splice(middle, 1);
+    console.log("16. Remove middle:", arr16);
+
+
+    // 17. Replace two elements using splice()
+    let arr17 = ["a", "b", "c", "d", "e"];
+    arr17.splice(1, 2, "x", "y");   // remove b, c and add x, y
+    console.log("17. Replace two:", arr17);
+
+
+    // 18. Copy part of an array using slice()
+    let arr18 = [10, 20, 30, 40, 50];
+    let part = arr18.slice(1, 4);   // index 1 to 3
+    console.log("18. Copied part:", part);
+
+
+    // 19. Use map() to create an array of cubes
+    let nums19 = [1, 2, 3, 4, 5];
+    let cubes = nums19.map(function (n) {
+      return n * n * n;
+    });
+    console.log("19. Cubes:", cubes);
+
+
+    // 20. Combine filter() and map() to double only even numbers
+    let nums20 = [1, 2, 3, 4, 5, 6, 7, 8];
+    let doubledEvens = nums20
+      .filter(function (n) {
+        return n % 2 === 0;
+      })
+      .map(function (n) {
+        return n * 2;
+      });
+    console.log("20. Doubled evens:", doubledEvens);
+
+
+    // =====================================================
+    //                 DESTRUCTURING TASKS
+    // =====================================================
+
+    // 1. Array destructuring - first two numbers
+    let numbers = [10, 20, 30, 40, 50];
+    let [first, second] = numbers;
+    console.log("D1. first:", first, "second:", second);
+
+
+    // 2. Rest operator with array of colors
+    let colors = ["red", "green", "blue", "yellow", "pink"];
+    let [firstColor, ...remainingColors] = colors;
+    console.log("D2. first color:", firstColor);
+    console.log("D2. remaining colors:", remainingColors);
+
+
+    // 3. Object destructuring
+    {
+      let person = { name: "Surya", age: 22, city: "Chennai" };
+      let { name, age, city } = person;
+      console.log("D3. name:", name, "age:", age, "city:", city);
+    }
+
+
+    // 4. Rename property while destructuring
+    {
+      let student = { name: "Arun", age: 20, course: "MCA" };
+      let { name: studentName, age, course } = student;
+      console.log("D4. studentName:", studentName, "age:", age, "course:", course);
+    }
+
+
+    // =====================================================
+    //                 REST OPERATOR TASKS
+    // =====================================================
+
+    // 5. Function that accepts any number of arguments and returns the sum
+    function sumAll(...numbers) {
+      let total = 0;
+      for (let i = 0; i < numbers.length; i++) {
+        total += numbers[i];
+      }
+      return total;
+    }
+    console.log("R5. sum of 1, 2, 3:", sumAll(1, 2, 3));
+    console.log("R5. sum of 5, 10, 15, 20:", sumAll(5, 10, 15, 20));
+
+
+    // 6. Name as first argument, remaining arguments in an array
+    function showDetails(name, ...others) {
+      console.log("R6. name:", name);
+      console.log("R6. others:", others);
+    }
+    showDetails("Surya", "MCA", "Chennai", 22);
+
+
+    // 7. Array with six numbers - first element and the rest
+    let sixNumbers = [1, 2, 3, 4, 5, 6];
+    let [firstNumber, ...restNumbers] = sixNumbers;
+    console.log("R7. first:", firstNumber);
+    console.log("R7. rest:", restNumbers);
+  </script>
+
+</body>
+</html>
